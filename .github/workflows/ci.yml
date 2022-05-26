@@ -42,7 +42,7 @@ jobs:
     if: github.event_name == 'pull_request'
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
 
     - name: Check if source files have changed
       run: |
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Setup Python
       uses: actions/setup-python@v2
@@ -117,7 +117,7 @@ jobs:
             mv coverage.xml ../
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - uses: conda-incubator/setup-miniconda@v2
       with:
@@ -217,7 +217,7 @@ jobs:
 
     steps:
       # Need to checkout code to get the coverage config.
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Download coverage report from CPU tests
       uses: actions/download-artifact@v1
@@ -253,7 +253,7 @@ jobs:
     timeout-minutes: 18
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - uses: conda-incubator/setup-miniconda@v2
       with:
@@ -353,7 +353,7 @@ jobs:
         flavor: ['', '[all]']
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Setup Python
       uses: actions/setup-python@v2
@@ -401,7 +401,7 @@ jobs:
         cuda: ['11.3']
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set image name and torch version
       env:
@@ -455,7 +455,7 @@ jobs:
     if: github.repository == 'allenai/allennlp'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
 
     - name: Setup SSH Client 🔑
       if: github.event_name == 'release' || github.event_name == 'push'
@@ -615,7 +615,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Setup Python
       uses: actions/setup-python@v2
