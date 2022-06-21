@@ -446,7 +446,7 @@ class ModelUsage(ModelCardInfo):
 
     _storage_location = "https://storage.googleapis.com/allennlp-public-models/"
     _config_location = (
-        "https://raw.githubusercontent.com/allenai/allennlp-models/main/training_config"
+        "https://raw.githubusercontent.com/hyroai/allennlp-models/main/training_config"
     )
 
     def __init__(
